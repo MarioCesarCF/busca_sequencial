@@ -5,16 +5,38 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(61, 59, 59);
+  color: rgb(215, 216, 209);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: antiquewhite;
+  gap: 20px;
+  padding: 5px;
+}
+
+header > div {
+  color: black;
+}
+
+header > img {
+  width: 100px;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   gap: 20px;
-  background-color: rgb(61, 59, 59);
-  color: rgb(215, 216, 209);
+  margin-top: 100px;
 }
 
 main > div {
@@ -23,6 +45,7 @@ main > div {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  width: 100vw;
 }
 
 input {
@@ -77,4 +100,19 @@ button:hover {
 
 span {
   font-size: 20px;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+  }
+
+  main > h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  main > h3 {
+    text-align: center;
+  }
 }
