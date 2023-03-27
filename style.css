@@ -74,3 +74,7 @@ button:hover {
   transition: 0.5s;
   transform: scale(1.1);
 }
+
+span {
+  font-size: 20px;
+}

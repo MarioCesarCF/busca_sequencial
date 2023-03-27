@@ -21,7 +21,6 @@ let contagem = 0;
 
 //Função que executa a busca sequencial com armazenamento de comparações na variável contagem.
 function buscaSequencial(lista, item) {
-  console.log(lista);
   for (let i = 0; i < lista.length; i++) {
     contagem++;
     if (lista[i] === item) {
