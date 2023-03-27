@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <button id="btnSequencial">Busca Sequencial</button>
-      <br />
-      <span id="resultSequencial"></span>
-    </div>  
-    <div>
-      <button id="btnBinaria">Busca Binaria</button>
-      <br />
-      <span id="resultBinaria"></span>
-    </div>
+    <main>
+      <h1>Busca Sequencial e Busca Binária</h1>
+      <h3>Informe no input abaixo um número inteiro de 1 a 100:</h3>
+      <input type="number" id="selectedNumber" />
+      <div class="container">
+        <div class="sequencial">
+          <button id="btnSequencial">Busca Sequencial</button>
+          <span id="resultSequencial"></span>
+        </div>
+        <div class="binaria">
+          <button id="btnBinaria">Busca Binária</button>
+          <span id="resultBinaria"></span>
+        </div>
+      </div>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@ const btnSequencial = document.getElementById("btnSequencial");
 const resultSequencial = document.getElementById("resultSequencial");
 const btnBinaria = document.getElementById("btnBinaria");
 const resultBinaria = document.getElementById("resultBinaria");
+const selectedNumber = document.getElementById("selectedNumber");
 
 //Método usado para gerar um array de 100 algarismos aleatórios de 1 a 100.
 function vetorNumerosAleatorios(max) {
@@ -20,11 +21,12 @@ let contagem = 0;
 
 //Função que executa a busca sequencial com armazenamento de comparações na variável contagem.
 function buscaSequencial(lista, item) {
+  console.log(lista);
   for (let i = 0; i < lista.length; i++) {
     contagem++;
     if (lista[i] === item) {
       resultSequencial.innerHTML = `A quantidade de comparações até achar o item foi de ${
-        contagem + 1
+        contagem
       } e o item buscado é ${item}.`;
 
       return i;
@@ -40,7 +42,7 @@ function buscaSequencial(lista, item) {
 btnSequencial.addEventListener("click", (e) => {
   e.preventDefault();
 
-  buscaSequencial(lista, 5);
+  buscaSequencial(lista, Number(selectedNumber.value));
 
   contagem = 0;
 });
@@ -78,7 +80,7 @@ function buscaBinaria(lista, item) {
 btnBinaria.addEventListener("click", (e) => {
   e.preventDefault();
 
-  buscaBinaria(listaOrdenada, 5);
+  buscaBinaria(listaOrdenada, Number(selectedNumber.value));
 
   contagem = 0;
 });
